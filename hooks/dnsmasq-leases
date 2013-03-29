@@ -17,10 +17,11 @@
 # $4 - host name
 SET="dhcp_leases"
 
-if [ "$1" = "new" ] || [ "$1" = "old" ]; then
- ipset add -! $SET $3
-else
- if [ "$1" = "del" ]; then
+case "$1" in
+ "add"|"old")
+  ipset add -! $SET $3
+  ;;
+ "del")
   ipset del -! $SET $3
- fi
-fi
+  ;;
+esac
