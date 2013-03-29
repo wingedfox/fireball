@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# Part of fireball iptables init script
+#
+# Author: Ilya Lebedev <ilya@lebedev.net>
+# License: LGPL v2
+#
+############################################################################################################
+# DNSMasq script hook
+############################################################################################################
+#
+# Receives data from DNSMasq and updates dhcp leases set accordingly
+#
+# $1 - old/new/del flag
+# $2 - mac address
+# $3 - ip address
+# $4 - host name
+SET="dhcp_leases"
+
+if [ "$1" = "new" ] || [ "$1" = "old" ]; then
+ ipset add -! $SET $3
+else
+ if [ "$1" = "del" ]; then
+  ipset del -! $SET $3
+ fi
+fi
