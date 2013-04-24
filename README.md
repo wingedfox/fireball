@@ -108,9 +108,14 @@ Script name: $SET_BLOCK_INT_SERVICES_FRW
 Contains: list of ports to block when forwarding requests from lan
 Defined: conf/sets/40.common-blocks.conf
 
-### Set allow_int_srv
-Script name: $SET_INT_SERVICES_IN
-Contains: list of ports to serve requests from lan
+### Set allow_int_srv_tcp
+Script name: $SET_INT_SERVICES_IN_TCP
+Contains: list of tcp ports to serve requests from lan
+Defined: conf/sets/20.default-services.conf and in the net/apps/*
+
+### Set allow_int_srv_udp
+Script name: $SET_INT_SERVICES_IN_UDP
+Contains: list of udp ports to serve requests from lan
 Defined: conf/sets/20.default-services.conf and in the net/apps/*
 
 ### Set allow_ext_srv
