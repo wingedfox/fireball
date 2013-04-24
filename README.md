@@ -24,6 +24,13 @@ Project aims to add a bit of simplicity to the iptables configuration.
  * Zero script configuration required (hope so)
  * ...
 
+### Supported apps
+ * Dnsmasq - dhcp&dns server
+ * MiniUPnP - upnp server
+ * Transmission - bittorrent client
+ * Mediatomb - DLNA server
+ * Samba - network shares
+ 
 ## Configuration
 
 Please note, this script is not for production use and has been tested in very limited environment.
