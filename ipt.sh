@@ -9,7 +9,7 @@ PWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #
 ##
 # Load configs
- load conf 
+ load init
 #
 ##
 #
