@@ -36,7 +36,22 @@ Project aims to add a bit of simplicity to the iptables configuration.
 Please note, this script is not for production use and has been tested in very limited environment.
 It may run well with another software versions than listed above, but this is not quaranteed.
 It does not contain any fool-proof checks, you can run script even if not all dependencies exists.
-For the first run please use the most restricted account to check that nothing will go wrong.
+For the first run please use the most restricted environment to check that nothing will go wrong.
+
+### Settings
+
+All configuration values reside in the /conf directory as the separate zero size files.
+
+#### net.ext
+*net.ext.* first matched value is used as a name of an external interface
+
+Example: net.ext.eth0 (default) - external interface name is *eth0*
+
+#### net.int
+*net.int.* first matched value is used as a name of an internal interface
+
+Example: net.ext.eth0 (default) - external interface name is *eth0*
+
 
 ### Kernel 
 Before using this script you have to carefully configure you kernel to be sure that nothing will go wrong at first time.
@@ -144,6 +159,7 @@ Defined: conf/sets/20.default-services.conf and in the net/apps/*
 ```
   - func.js     - common functions
   |- conf       - configuration files
+  |- init       - init scripts
     - *.conf
     |- sets     - ip sets definitions
       - *.conf
