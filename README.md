@@ -155,6 +155,11 @@ Script name: $SET_INT_SERVICES_EX_OUT
 Contains: list of security exclusions to be served for lan outgoing packets, e.g. allows dnsmasq to anwser from 255.255.255.255
 Defined: conf/sets/20.default-services.conf and in the net/apps/*
 
+### Set win10_telemetry
+Script name $SET_INT_SERVICES_EX_OUT
+Contains: list of ips of known for win10 telemetry capturing hosts
+Defined: conf/sets/50.win10-telemetry.conf
+
 ## Project structure
 ```
   - func.js     - common functions

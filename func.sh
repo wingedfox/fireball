@@ -43,16 +43,20 @@ function mask2cidr () {
 ##
 # echo helpers
  function info () {
-     $E -e " \e[32;01m*\e[0m $*"
+     $E -e "\e[32;01m*\e[0m $*"
+     logger "[ipt.info] $*"
  }
  function err () {
-     $E -e " \e[31;01m*\e[0m $*"
+     $E -e "\e[31;01m*\e[0m $*"
+     logger "[ipt.err] $*"
  }
  function dbg () {
      $E -e "\e[33;01m$*\e[0m"
+     logger "[ipt.dbg] $*"
  }
  function title () {
      $E -e "\e[0;01m$*\e[0m"
+     logger "[ipt.title] $*"
  }
 #
 ###
